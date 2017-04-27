@@ -1,0 +1,44 @@
+@import variable
+
+.banner
+	background: url("../img/baner.jpg") 0/cover no-repeat
+	height: 100vh
+	min-height: 650px
+	width: 100%
+	position: relative
+
+	&__container
+		padding: 0
+	
+.banner:before
+	content: ""
+	position: absolute
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background: rgba(45, 46, 74, .95)
+
+.banner__txt
+	color: $white
+	margin-top: 30vh
+	text-align: center
+
+.banner__subtitle
+	font-size: 1.57rem
+	line-height: 1.5
+	margin-bottom: 100px
+
+@media (max-width: 772px)
+	.banner
+		&__container
+			padding-left: 10px 
+			padding-right: 10px
+		
+		&__subtitle
+			margin-bottom: 50px
+
+@media (max-width: 520px)
+	.banner__subtitle
+		font-size: 1.2rem
+		line-height: 1.2

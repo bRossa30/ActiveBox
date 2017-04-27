@@ -1,0 +1,64 @@
+@import variable
+
+.navbar
+	border-radius: 0
+	margin-bottom: 0
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	z-index: 99999
+
+	&-inverse 
+		background: transparent
+		border: none
+
+		.navbar-nav > .active
+			>a
+				background: transparent
+				&:focus,
+				&:hover
+					background: transparent
+	li a
+		line-height: $nav-height
+
+@media (max-width: 768px) 
+	.navbar-inverse .navbar-collapse 
+		border-color: transparent
+		background: rgb(45, 46, 74)
+		margin: 0
+		padding: 0
+
+		.navbar-nav li
+			text-align: center	
+
+.nav
+	> li > a
+		padding: 0
+		margin-left: 60px
+
+	&--container
+		height: $nav-height
+		border-bottom: 1px solid $light-violet
+		padding: 0
+
+a.navbar-brand
+		margin-top: calc((#{$nav-height} - 24px) / 2 )
+		padding: 0 15px
+
+@media (max-width: 992px)
+	.nav > li > a
+		margin-left: 20px
+
+	.container > .navbar-header
+		margin: 0
+
+.navbar-inverse .navbar-toggle 
+	margin-top: calc((#{$nav-height} - 30px) / 2 )
+	margin-right: 30px
+	border-color: $intense-color-bs
+
+	.icon-bar,
+	.sr-only
+		border-color: $intense-color-bs
+		background-color: $intense-color-bs 
